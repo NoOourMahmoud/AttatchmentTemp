@@ -8,11 +8,12 @@ class ExcelController < ApplicationController
         @sheet.sheet.attach(params[:sheet])
         
         if @sheet.save
-            if @sheet.sheet.attached?
-                redirect_to root_path , notice: "Successfully uploaded"
-            else
-                redirect_to fail_path
-            end
+            # if @sheet.sheet.attached?
+            #     redirect_to root_path , notice: "Successfully uploaded"
+            # else
+            #     redirect_to fail_path
+            # end
+            redirect_to root_path , notice: "Successfully uploaded"
         else
             render :newSheet
         end
