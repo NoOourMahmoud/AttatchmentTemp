@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root to: "excel#newSheet"
   post "excel", to: "excel#uploadSheet"
-  
+
+  get "fail", to: "fail#show"
 end
